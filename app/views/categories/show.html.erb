@@ -9,6 +9,11 @@
   <strong>Private:</strong>
   <%= @category.private %>
 </p>
+  <h1>Apuntes</h1>
+  <ul>
+    <% @category.types.each do |type| %>
+      <li><%= type.name %></li>
+    <% end %>
 
 <%= link_to 'Edit', edit_category_path(@category) %> |
 <%= link_to 'Back', categories_path %>
