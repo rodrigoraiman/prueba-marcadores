@@ -4,6 +4,11 @@
   <strong>Name:</strong>
   <%= @type.name %>
 </p>
+  <h1>Tipos</h1>
+  <ul>
+    <% @type.categories.each do |category| %>
+      <li><%= category.name %></li>
+    <% end %>
 
 <%= link_to 'Edit', edit_type_path(@type) %> |
 <%= link_to 'Back', types_path %>
